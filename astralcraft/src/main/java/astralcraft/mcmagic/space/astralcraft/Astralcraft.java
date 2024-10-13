@@ -31,48 +31,25 @@ public class Astralcraft extends JavaPlugin {
         assert toolName != null;
         if (Material.getMaterial(toolName) != null) {
             requiredTool = Material.getMaterial(toolName);
-            getLogger().info("Используется предмет: " + requiredTool.name());
+            getLogger().info("Using items: " + requiredTool.name());
         } else {
-            getLogger().warning("Предмет \"" + toolName + "\" не найден! Проверьте название предмета.");
+            getLogger().warning("items \"" + toolName + "\" not found! check items name.");
         }
         if (Objects.equals(soundPlay, "true")){
-        try {
-            successSound = Sound.valueOf(soundName);
-            getLogger().info("Используется звук: " + successSound.name());
-            getLogger().info("Установлено значение true у sound");
-        } catch (IllegalArgumentException e) {
-            getLogger().warning("Звук " + soundName + " не найден! Проверьте название звука.");
-            successSound = null;
+            try {
+                successSound = Sound.valueOf(soundName);
+                getLogger().info("Using sound: " + successSound.name());
+                getLogger().info("sound set to true");
+            } catch (IllegalArgumentException e) {
+                getLogger().warning("sound " + soundName + " not found! check sound name.");
+                successSound = null;
             }
         } if(Objects.equals(soundPlay, "false")) {
-            getLogger().info("Установлено значение false у sound, звуки не будут воспроизводится");
+            getLogger().info("Sound is set to false, no sounds will be played");
         }
-
-
     }
-
-
 
     public static Astralcraft getInstance() {
         return instans;
-    }
-
-    public Material getRequiredTool() {
-        return requiredTool;
-    }
-
-    // Метод для получения текущего звука
-    public Sound getSuccessSound() {
-        return successSound;
-    }
-
-    // Метод для обновления инструмента после перезагрузки конфига
-    public void setRequiredTool(Material tool) {
-        this.requiredTool = tool;
-    }
-
-    // Метод для обновления звука после перезагрузки конфига
-    public void setSuccessSound(Sound sound) {
-        this.successSound = sound;
     }
 }
