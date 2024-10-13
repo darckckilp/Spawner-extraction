@@ -34,7 +34,7 @@ public void onPlayerInteract(PlayerInteractEvent event) {
             block.setType(Material.AIR);
             ItemStack spawner = new ItemStack(Material.SPAWNER, 1);
             player.getInventory().addItem(spawner);
-            player.sendMessage("Вы добыли спавнер!");
+            player.sendMessage(ChatColor.GREEN + "you received a spawner!");
             decreaseItemInHand(player);
             playSuccessSound(player);
         }
