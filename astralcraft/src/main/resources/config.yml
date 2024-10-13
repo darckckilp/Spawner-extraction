@@ -1,0 +1,3 @@
+item: DIAMOND #required item to get spawner, default: DIAMOND
+sound: BLOCK_AMETHYST_BLOCK_BREAK #play sound on break spawner, default: BLOCK_AMETHYST_BLOCK_BREAK
+sound-play: true #will there be sounds after getting spawner? default: true

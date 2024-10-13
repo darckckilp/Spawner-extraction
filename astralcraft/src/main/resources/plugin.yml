@@ -1,0 +1,7 @@
+name: astralcraft
+version: '${project.version}'
+main: astralcraft.mcmagic.space.astralcraft.Astralcraft
+api-version: '1.21'
+authors: [0_Noil_0]
+commands:
+  astralcraft: {}

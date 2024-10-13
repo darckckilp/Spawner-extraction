@@ -1,0 +1,7 @@
+name: astralcraft
+version: '1.0-SNAPSHOT'
+main: astralcraft.mcmagic.space.astralcraft.Astralcraft
+api-version: '1.21'
+authors: [0_Noil_0]
+commands:
+  astralcraft: {}
